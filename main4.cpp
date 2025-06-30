@@ -2,7 +2,7 @@
 using namespace std;
 
 class Operacoes{
-    private:
+    protected:
         double operador1; //Primeiro Operador
         double operador2; //Segundo Operador
     public:
@@ -16,8 +16,17 @@ class Operacoes{
         }    
 };
 
+class Operacoes_Basicas: public Operacoes{
+    public:
+    Operacoes_Basicas(double Op1, double Op2): Operacoes(Op1, Op2){}
+    double adicionar(){
+        return operador1 + operador2;
+    }
+};
+
 int main(){
-    Operacoes operacao(3, 2);
+    Operacoes_Basicas operacao(10, 5);
     cout << "resultado da multiplicao: " << operacao.multiplicar() << endl;
+    cout << "resultado da adicao: " << operacao.adicionar() << endl;
     return 0;
 }

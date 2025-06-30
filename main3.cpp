@@ -17,7 +17,7 @@ class Operacoes{
 };
 
 int main(){
-    Operacoes operacao(3, 2);
+    Operacoes operacao(6, 2);
     cout << "resultado da multiplicao: " << operacao.multiplicar() << endl;
     return 0;
 }
